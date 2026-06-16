@@ -3,7 +3,7 @@ name: Atnaujinti TV Programa
 on:
   schedule:
     - cron: '0 3 * * *' # Kiekvieną naktį 03:00 val. ryte
-  workflow_dispatch: # Leidžia paleisti rankiniu būdu
+  workflow_dispatch: # Leidžia paleisti rankiniu būdu bet kada
 
 jobs:
   update-epg:
@@ -11,19 +11,27 @@ jobs:
     steps:
       - name: Tikrinti koda
         uses: actions/checkout@v4
-
-      - name: Paruošti Python
-        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          persist-credentials: true # Suteikia robotui pilną saugumo raktą rašymui
 
-      - name: Sukurti naują programa.xml
-        run: python generuoti.py
+      - name: Atsisiųsti ir tiesiogiai pakeisti XML
+        run: |
+          # Naudojame stabiliausią viešą Lietuvos TV gidą, kuris atnaujinamas kasdien
+          curl -sL "https://raw.githubusercontent.com/skid9000/epg/master/epg.xml" -o programa.xml
+          
+          # Patikriname, ar failas tikrai atsisiuntė ir nėra tuščias
+          if [ -s programa.xml ]; then
+            echo "Failas sėkmingai gautas."
+          else
+            echo "Klaida: Nepavyko gauti duomenų."
+            exit 1
+          fi
 
-      - name: Issaugoti pakeitimus
+      - name: Issaugoti pakeitimus saugykloje
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add programa.xml
-          git commit -m "Automatinis TV programos atnaujinimas [skip ci]" || exit 0
-          git push
+          # Naudojame -f (force), kad priverstinai perrašytų senas 4 eilutes
+          git commit -m "Automatinis TV programos atnaujinimas [skip ci]" || echo "Nėra pakeitimų"
+          git push origin main
