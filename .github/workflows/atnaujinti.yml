@@ -10,16 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Tikrinti koda
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Atsisiusti naujausia EPG
         run: |
-          curl -s https://iptv-org.github.io/epg/guides/lt/tv24.lt.xml -o programa.xml
+          # Naudojame naują, veikiantį iptv-org Lietuvos programos šaltinį
+          curl -sL https://iptv-org.github.io/epg/guides/lt/lt.xml -o programa.xml
 
       - name: Issaugoti pakeitimus
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
           git add programa.xml
-          git commit -m "Automatinis TV programos atnaujinimas" || exit 0
+          git commit -m "Automatinis TV programos atnaujinimas [skip ci]" || exit 0
           git push
