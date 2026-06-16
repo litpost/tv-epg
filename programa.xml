@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv generator-info-name="Lithuanian EPG Generator" generator-info-url="https://github.com/litpost/tv-epg">
-  
-  <channel id="LRT.lt">
-    <display-name lang="lt">LRT Televizija</display-name>
-  </channel>
-  <channel id="TV3.lt">
-    <display-name lang="lt">TV3</display-name>
-  </channel>
-  <channel id="LNK.lt">
-    <display-name lang="lt">LNK</display-name>
-  </channel>
-  <channel id="BTV.lt">
-    <display-name lang="lt">BTV</display-name>
-  </channel>
+<tv generator-info-name="Automatinis EPG">
+  <channel id="LRT.lt"><display-name lang="lt">LRT Televizija</display-name></channel>
+  <channel id="TV3.lt"><display-name lang="lt">TV3</display-name></channel>
+  <channel id="LNK.lt"><display-name lang="lt">LNK</display-name></channel>
+  <channel id="BTV.lt"><display-name lang="lt">BTV</display-name></channel>
 
   <programme start="20260616060000 +0300" stop="20260616090000 +0300" channel="LRT.lt">
     <title lang="lt">Labas rytas, Lietuva</title>
-    <desc lang="lt">Informacinė-amžinosios jaunystės laida, žadinanti Lietuvą kasdien su naujausiomis žiniomis, orais ir spaudos apžvalga.</desc>
-  </programme>
-  <programme start="20260616090000 +0300" stop="20260616100000 +0300" channel="LRT.lt">
-    <title lang="lt">Savybės ir likimai</title>
-    <desc lang="lt">Dokumentinis serialas apie neįtikėtinas žmonių istorijas.</desc>
+    <desc lang="lt">Informacinė laida, žadinanti Lietuvą kasdien su naujausiomis žiniomis.</desc>
   </programme>
   <programme start="20260616120000 +0300" stop="20260616130000 +0300" channel="LRT.lt">
     <title lang="lt">LRT Žinios</title>
@@ -31,36 +18,16 @@
     <title lang="lt">Dienos tema</title>
     <desc lang="lt">Aktualijų ir interviu laida su svarbiausiais dienos asmenimis.</desc>
   </programme>
-  <programme start="20260616210000 +0300" stop="20260616230000 +0300" channel="LRT.lt">
-    <title lang="lt">Vakaro Filmas: Detektyvas</title>
-    <desc lang="lt">Geriausias Europos kinas jūsų ekranuose.</desc>
-  </programme>
 
-  <programme start="20260616063000 +0300" stop="20260616083000 +0300" channel="TV3.lt">
-    <title lang="lt">Miela animacija rytui</title>
-    <desc lang="lt">Multifilmai patiems mažiausiems žiūrovams.</desc>
-  </programme>
-  <programme start="20260616160000 +0300" stop="20260616173000 +0300" channel="TV3.lt">
-    <title lang="lt">Gero vakaro šou</title>
-    <desc lang="lt">Humoro ir pramogų laida, kurioje svečiuojasi žinomi Lietuvos žmonės.</desc>
+  <programme start="20260616070000 +0300" stop="20260616090000 +0300" channel="TV3.lt">
+    <title lang="lt">Nauja diena</title>
+    <desc lang="lt">Rytinė informacinė laida.</desc>
   </programme>
   <programme start="20260616183000 +0300" stop="20260616193000 +0300" channel="TV3.lt">
     <title lang="lt">TV3 Žinios</title>
     <desc lang="lt">Karščiausi dienos įvykiai iš Lietuvos ir užsienio.</desc>
   </programme>
-  <programme start="20260616203000 +0300" stop="20260616223000 +0300" channel="TV3.lt">
-    <title lang="lt">Moterys meluoja geriau</title>
-    <desc lang="lt">Populiariausias lietuviškas serialas ir jo herojų nuotykiai.</desc>
-  </programme>
 
-  <programme start="20260616070000 +0300" stop="20260616080000 +0300" channel="LNK.lt">
-    <title lang="lt">KK2 Ryte</title>
-    <desc lang="lt">Smagi informacinė laida naujos dienos pradžiai.</desc>
-  </programme>
-  <programme start="20260616173000 +0300" stop="20260616183000 +0300" channel="LNK.lt">
-    <title lang="lt">Yra kaip yra</title>
-    <desc lang="lt">Socialinių diskusijų laida karštomis temomis.</desc>
-  </programme>
   <programme start="20260616183000 +0300" stop="20260616193000 +0300" channel="LNK.lt">
     <title lang="lt">Žinios</title>
     <desc lang="lt">Išsamiausia dienos naujienų apžvalga.</desc>
@@ -70,13 +37,8 @@
     <desc lang="lt">Aktualijos, satyra ir tyrimai linksmai.</desc>
   </programme>
 
-  <programme start="20260616120000 +0300" stop="20260616140000 +0300" channel="BTV.lt">
-    <title lang="lt">Krepšinio dokumentika</title>
-    <desc lang="lt">Istorinės Lietuvos krepšinio pergalės ir interviu.</desc>
-  </programme>
   <programme start="20260616190000 +0300" stop="20260616210000 +0300" channel="BTV.lt">
-    <title lang="lt">Veiksmo filmas: Greiti ir įsiutę</title>
-    <desc lang="lt">Adrenalinas, greitis ir neįtikėtini triukai gatvėse.</desc>
+    <title lang="lt">Vakaro vaidybinis filmas</title>
+    <desc lang="lt">Pramoginis kinas jūsų namuose.</desc>
   </programme>
-  
 </tv>
