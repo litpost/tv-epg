@@ -1,0 +1,25 @@
+name: Atnaujinti TV Programa
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # Kiekvieną naktį 03:00 val. ryte
+  workflow_dispatch: # Leidžia paleisti rankiniu būdu
+
+jobs:
+  update-epg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tikrinti koda
+        uses: actions/checkout@v3
+
+      - name: Atsisiusti naujausia EPG
+        run: |
+          curl -s https://iptv-org.github.io/epg/guides/lt/tv24.lt.xml -o programa.xml
+
+      - name: Issaugoti pakeitimus
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add programa.xml
+          git commit -m "Automatinis TV programos atnaujinimas" || exit 0
+          git push
