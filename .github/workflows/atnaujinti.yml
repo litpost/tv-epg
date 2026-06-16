@@ -3,7 +3,7 @@ name: Atnaujinti TV Programa
 on:
   schedule:
     - cron: '0 3 * * *' # Kiekvieną naktį 03:00 val. ryte
-  workflow_dispatch: # Leidžia paleisti rankiniu būdu bandymams
+  workflow_dispatch: # Leidžia paleisti rankiniu būdu
 
 jobs:
   update-epg:
@@ -14,15 +14,13 @@ jobs:
 
       - name: Atsisiusti naujausia EPG
         run: |
-          # Naudojame oficialią ir veikiančią iptv-org Lietuvos EPG nuorodą
-          # -f parametras užtikrina, kad jei serveris mes klaidą, robotas neįrašys nesąmonių
-          curl -f -sL https://iptv-org.github.io/epg/guides/lt/lt.xml -o programa.xml
+          # Naudojame veikiantį alternatyvų Lietuvos TV programos šaltinį
+          curl -f -sL https://raw.githubusercontent.com/DeividasM/Lithuanian-IPTV-List/main/epg.xml -o programa.xml
 
       - name: Issaugoti pakeitimus
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add programa.xml
-          # [skip ci] neleidžia robotui užsiciklinti ir paleidinėti savęs be galo
           git commit -m "Automatinis TV programos atnaujinimas [skip ci]" || exit 0
           git push
