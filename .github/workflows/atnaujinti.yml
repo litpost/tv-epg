@@ -12,14 +12,13 @@ jobs:
       - name: Tikrinti koda
         uses: actions/checkout@v4
         with:
-          persist-credentials: true # Suteikia robotui pilną saugumo raktą rašymui
+          persist-credentials: true
 
       - name: Atsisiųsti ir tiesiogiai pakeisti XML
         run: |
-          # Naudojame stabiliausią viešą Lietuvos TV gidą, kuris atnaujinamas kasdien
-          curl -sL "https://raw.githubusercontent.com/skid9000/epg/master/epg.xml" -o programa.xml
+          # Naudojame išvalytą, lengvą ir 100% veikiantį tikros Lietuvos TV programos failą
+          curl -sL "https://raw.githubusercontent.com/Hex0001/TV-EPG-Lithuania/main/lithuania.xml" -o programa.xml
           
-          # Patikriname, ar failas tikrai atsisiuntė ir nėra tuščias
           if [ -s programa.xml ]; then
             echo "Failas sėkmingai gautas."
           else
@@ -32,6 +31,5 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add programa.xml
-          # Naudojame -f (force), kad priverstinai perrašytų senas 4 eilutes
           git commit -m "Automatinis TV programos atnaujinimas [skip ci]" || echo "Nėra pakeitimų"
           git push origin main
