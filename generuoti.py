@@ -1,56 +1,67 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 def generuoti_epg():
     # Gauname šiandienos datą formatu YYYYMMDD
     today = datetime.now().strftime("%Y%m%d")
     
-    xml_data = f"""<?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="Automatinis Vietinis EPG">
-  <channel id="LRT"><display-name>LRT Televizija</display-name></channel>
-  <channel id="TV3"><display-name>TV3</display-name></channel>
-  <channel id="LNK"><display-name>LNK</display-name></channel>
-  <channel id="BTV"><display-name>BTV</display-name></channel>
+    # Šabloninės dienos laidos, kurios keičiasi pagal realų laiką
+    laidos_sarasas = [
+        ("06:00", "06:30", "Ryto programa", "Pradėkite dieną žvaliai."),
+        ("06:30", "09:00", "Informacinė ryto laida", "Karščiausios naujienos, apžvalgos ir interviu."),
+        ("09:00", "12:00", "Dienos vaidybinis filmas", "Įtraukianti istorija visai šeimai."),
+        ("12:00", "13:00", "Dienos žinios ir komentarai", "Svarbiausi įvykiai Lietuvoje."),
+        ("13:00", "15:00", "Dokumentinis serialas", "Gamta, mokslas ir atradimai."),
+        ("15:00", "17:00", "Popietės pokalbių laida", "Diskusijos aktualiomis temomis."),
+        ("17:00", "18:30", "Populiarus serialas", "Naujausia užsienio produkcijos serija."),
+        ("18:30", "19:30", "Vakaro Žinios", "Išsamus dienos įvykių reportažas."),
+        ("19:30", "21:00", "Aktualijų ir pramogų šou", "Gera nuotaika bei analizė."),
+        ("21:00", "23:00", "Vakaro kino filmas", "Geriausių reitingų vaidybinis kinas."),
+        ("23:00", "23:59", "Dienos apžvalga ir naktinis kinas", "Svarbiausių akcentų santrauka.")
+    ]
 
-  <programme start="{today}060000 +0300" stop="{today}090000 +0300" channel="LRT">
-    <title>Labas rytas, Lietuva</title>
-    <desc>Informacinė-pramoginė laida.</desc>
-  </programme>
-  <programme start="{today}183000 +0300" stop="{today}193000 +0300" channel="LRT">
-    <title>LRT Žinios</title>
-    <desc>Svarbiausios naujienos iš Lietuvos ir pasaulio.</desc>
-  </programme>
-  <programme start="{today}210000 +0300" stop="{today}230000 +0300" channel="LRT">
-    <title>Vakaro vaidybinis filmas</title>
-    <desc>Geriausias europietiškas kinas jūsų namuose.</desc>
-  </programme>
+    kanalai = [
+        ("LRT", "LRT Televizija"),
+        ("TV3", "TV3"),
+        ("LNK", "LNK"),
+        ("BTV", "BTV"),
+        ("TV6", "TV6")
+    ]
 
-  <programme start="{today}063000 +0300" stop="{today}083000 +0300" channel="TV3">
-    <title>TV3 Žinios. Ryto santrauka</title>
-    <desc>Svarbiausios ryto naujienos.</desc>
-  </programme>
-  <programme start="{today}183000 +0300" stop="{today}193000 +0300" channel="TV3">
-    <title>TV3 Žinios</title>
-    <desc>Karščiausi dienos įvykiai.</desc>
-  </programme>
+    xml_lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<tv generator-info-name="Išmanusis Vietinis EPG">'
+    ]
 
-  <programme start="{today}183000 +0300" stop="{today}193000 +0300" channel="LNK">
-    <title>KK2</title>
-    <desc>Apžvalginė aktualijų laida.</desc>
-  </programme>
-  <programme start="{today}193000 +0300" stop="{today}210000 +0300" channel="LNK">
-    <title>KK2 Penktadienis</title>
-    <desc>Smagi savaitgalio pokalbių laida.</desc>
-  </programme>
+    # Sugeneruojame kanalų sąrašą
+    for ch_id, ch_name in kanalai:
+        xml_lines.append(f'  <channel id="{ch_id}"><display-name>{ch_name}</display-name></channel>')
 
-  <programme start="{today}200000 +0300" stop="{today}220000 +0300" channel="BTV">
-    <title>Sava savaitė</title>
-    <desc>Informacinė analitinė laida.</desc>
-  </programme>
-</tv>
-"""
+    xml_lines.append("")
+
+    # Sugeneruojame programas kiekvienam kanalui
+    for ch_id, _ in kanalai:
+        for nuo, iki, pavadinimas, aprasymas in laidos_sarasas:
+            # Pašaliname dvitaškius iš laiko formato
+            start_laikas = f"{today}{nuo.replace(':', '')}00 +0300"
+            stop_laikas = f"{today}{iki.replace(':', '')}00 +0300"
+            
+            # Pridedame unikalumo skirtingiems kanalams, kad programa nebūtų visiškai identiška
+            pataisytas_pavadinimas = f"{pavadinimas}"
+            if ch_id != "LRT" and "Žinios" in pavadinimas:
+                pataisytas_pavadinimas = f"{ch_id} Žinios"
+            elif ch_id == "TV6" and "filmas" in pavadinimas:
+                pataisytas_pavadinimas = "Veiksmo filmas"
+
+            xml_lines.append(f'  <programme start="{start_laikas}" stop="{stop_laikas}" channel="{ch_id}">')
+            xml_lines.append(f'    <title>{pataisytas_pavadinimas}</title>')
+            xml_lines.append(f'    <desc>{aprasymas}</desc>')
+            xml_lines.append('  </programme>')
+
+    xml_lines.append('</tv>')
+
     with open("programa.xml", "w", encoding="utf-8") as f:
-        f.write(xml_data)
-    print("programa.xml sėkmingai sugeneruotas šiandienai!")
+        f.write("\n".join(xml_lines))
+    print("programa.xml sėkmingai sugeneruotas iš naujo!")
 
 if __name__ == "__main__":
     generuoti_epg()
