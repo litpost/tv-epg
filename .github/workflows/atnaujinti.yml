@@ -2,8 +2,8 @@ name: Atnaujinti TV Programa
 
 on:
   schedule:
-    - cron: '0 3 * * *'
-  workflow_dispatch:
+    - cron: '0 3 * * *' # Kiekvieną naktį 03:00 val.
+  workflow_dispatch: # Leidžia paleisti rankiniu būdu bet kada
 
 jobs:
   update-epg:
@@ -14,13 +14,25 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Paruošti Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
+      - name: Atsisiųsti oficialų EPG ir išfiltruoti Lietuvą
+        run: |
+          echo "Siunčiamas pasaulinis EPG šaltinis..."
+          # Atsisiunčiame oficialų iptv-org EPG gairių failą (suspaustą)
+          curl -sL "https://iptv-org.github.io/epg/guides/lt/tv24.lt.xml" -o programa.xml
 
-      - name: Paleisti generatoriu
-        run: python generuoti.py
+          # Saugiklis: Jei tv24.lt būtų nepasiekiamas, naudojame bendrą atsarginį kanalų gidą
+          if [ ! -s programa.xml ] || grep -q "404" programa.xml; then
+            echo "Pagrindinis šaltinis nepasiekiamas, siunčiamas alternatyvus..."
+            curl -sL "https://raw.githubusercontent.com/iptv-org/epg/master/guides/lt/tv3.lt.xml" -o programa.xml
+          fi
+
+          # Galutinis patikrinimas, ar failas egzistuoja ir turi turinį
+          if [ -s programa.xml ]; then
+            echo "Failas sėkmingai paruoštas."
+          else
+            echo "Klaida: Nepavyko gauti jokių EPG duomenų."
+            exit 1
+          fi
 
       - name: Issaugoti pakeitimus saugykloje
         run: |
