@@ -14,23 +14,22 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Atsisiųsti oficialų EPG ir išfiltruoti Lietuvą
+      - name: Atsisiųsti oficialų Lietuvos EPG
         run: |
-          echo "Siunčiamas pasaulinis EPG šaltinis..."
-          # Atsisiunčiame oficialų iptv-org EPG gairių failą (suspaustą)
+          echo "Siunčiamas oficialus iptv-org Lietuvos gidas..."
+          # Atsisiunčiame tiesioginį tv24.lt gidą iš iptv-org serverio
           curl -sL "https://iptv-org.github.io/epg/guides/lt/tv24.lt.xml" -o programa.xml
 
-          # Saugiklis: Jei tv24.lt būtų nepasiekiamas, naudojame bendrą atsarginį kanalų gidą
+          # Saugiklis: Jei pagrindinis serveris streikuotų, paimame atsarginį tv3.lt šaltinį
           if [ ! -s programa.xml ] || grep -q "404" programa.xml; then
-            echo "Pagrindinis šaltinis nepasiekiamas, siunčiamas alternatyvus..."
-            curl -sL "https://raw.githubusercontent.com/iptv-org/epg/master/guides/lt/tv3.lt.xml" -o programa.xml
+            echo "Atsarginis šaltinis..."
+            curl -sL "https://iptv-org.github.io/epg/guides/lt/tv3.lt.xml" -o programa.xml
           fi
 
-          # Galutinis patikrinimas, ar failas egzistuoja ir turi turinį
           if [ -s programa.xml ]; then
-            echo "Failas sėkmingai paruoštas."
+            echo "Failas sėkmingai gautas ir įrašytas."
           else
-            echo "Klaida: Nepavyko gauti jokių EPG duomenų."
+            echo "Klaida: Nepavyko gauti duomenų."
             exit 1
           fi
 
