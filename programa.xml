@@ -6,223 +6,223 @@
   <channel id="BTV"><display-name>BTV</display-name></channel>
   <channel id="TV6"><display-name>TV6</display-name></channel>
 
-  <programme start="20260711060000 +0300" stop="20260711063000 +0300" channel="LRT">
+  <programme start="20260712060000 +0300" stop="20260712063000 +0300" channel="LRT">
     <title>Ryto programa</title>
     <desc>Pradėkite dieną žvaliai.</desc>
   </programme>
-  <programme start="20260711063000 +0300" stop="20260711090000 +0300" channel="LRT">
+  <programme start="20260712063000 +0300" stop="20260712090000 +0300" channel="LRT">
     <title>Informacinė ryto laida</title>
     <desc>Karščiausios naujienos, apžvalgos ir interviu.</desc>
   </programme>
-  <programme start="20260711090000 +0300" stop="20260711120000 +0300" channel="LRT">
+  <programme start="20260712090000 +0300" stop="20260712120000 +0300" channel="LRT">
     <title>Dienos vaidybinis filmas</title>
     <desc>Įtraukianti istorija visai šeimai.</desc>
   </programme>
-  <programme start="20260711120000 +0300" stop="20260711130000 +0300" channel="LRT">
+  <programme start="20260712120000 +0300" stop="20260712130000 +0300" channel="LRT">
     <title>Dienos žinios ir komentarai</title>
     <desc>Svarbiausi įvykiai Lietuvoje.</desc>
   </programme>
-  <programme start="20260711130000 +0300" stop="20260711150000 +0300" channel="LRT">
+  <programme start="20260712130000 +0300" stop="20260712150000 +0300" channel="LRT">
     <title>Dokumentinis serialas</title>
     <desc>Gamta, mokslas ir atradimai.</desc>
   </programme>
-  <programme start="20260711150000 +0300" stop="20260711170000 +0300" channel="LRT">
+  <programme start="20260712150000 +0300" stop="20260712170000 +0300" channel="LRT">
     <title>Popietės pokalbių laida</title>
     <desc>Diskusijos aktualiomis temomis.</desc>
   </programme>
-  <programme start="20260711170000 +0300" stop="20260711183000 +0300" channel="LRT">
+  <programme start="20260712170000 +0300" stop="20260712183000 +0300" channel="LRT">
     <title>Populiarus serialas</title>
     <desc>Naujausia užsienio produkcijos serija.</desc>
   </programme>
-  <programme start="20260711183000 +0300" stop="20260711193000 +0300" channel="LRT">
+  <programme start="20260712183000 +0300" stop="20260712193000 +0300" channel="LRT">
     <title>Vakaro Žinios</title>
     <desc>Išsamus dienos įvykių reportažas.</desc>
   </programme>
-  <programme start="20260711193000 +0300" stop="20260711210000 +0300" channel="LRT">
+  <programme start="20260712193000 +0300" stop="20260712210000 +0300" channel="LRT">
     <title>Aktualijų ir pramogų šou</title>
     <desc>Gera nuotaika bei analizė.</desc>
   </programme>
-  <programme start="20260711210000 +0300" stop="20260711230000 +0300" channel="LRT">
+  <programme start="20260712210000 +0300" stop="20260712230000 +0300" channel="LRT">
     <title>Vakaro kino filmas</title>
     <desc>Geriausių reitingų vaidybinis kinas.</desc>
   </programme>
-  <programme start="20260711230000 +0300" stop="20260711235900 +0300" channel="LRT">
+  <programme start="20260712230000 +0300" stop="20260712235900 +0300" channel="LRT">
     <title>Dienos apžvalga ir naktinis kinas</title>
     <desc>Svarbiausių akcentų santrauka.</desc>
   </programme>
-  <programme start="20260711060000 +0300" stop="20260711063000 +0300" channel="TV3">
+  <programme start="20260712060000 +0300" stop="20260712063000 +0300" channel="TV3">
     <title>Ryto programa</title>
     <desc>Pradėkite dieną žvaliai.</desc>
   </programme>
-  <programme start="20260711063000 +0300" stop="20260711090000 +0300" channel="TV3">
+  <programme start="20260712063000 +0300" stop="20260712090000 +0300" channel="TV3">
     <title>Informacinė ryto laida</title>
     <desc>Karščiausios naujienos, apžvalgos ir interviu.</desc>
   </programme>
-  <programme start="20260711090000 +0300" stop="20260711120000 +0300" channel="TV3">
+  <programme start="20260712090000 +0300" stop="20260712120000 +0300" channel="TV3">
     <title>Dienos vaidybinis filmas</title>
     <desc>Įtraukianti istorija visai šeimai.</desc>
   </programme>
-  <programme start="20260711120000 +0300" stop="20260711130000 +0300" channel="TV3">
+  <programme start="20260712120000 +0300" stop="20260712130000 +0300" channel="TV3">
     <title>Dienos žinios ir komentarai</title>
     <desc>Svarbiausi įvykiai Lietuvoje.</desc>
   </programme>
-  <programme start="20260711130000 +0300" stop="20260711150000 +0300" channel="TV3">
+  <programme start="20260712130000 +0300" stop="20260712150000 +0300" channel="TV3">
     <title>Dokumentinis serialas</title>
     <desc>Gamta, mokslas ir atradimai.</desc>
   </programme>
-  <programme start="20260711150000 +0300" stop="20260711170000 +0300" channel="TV3">
+  <programme start="20260712150000 +0300" stop="20260712170000 +0300" channel="TV3">
     <title>Popietės pokalbių laida</title>
     <desc>Diskusijos aktualiomis temomis.</desc>
   </programme>
-  <programme start="20260711170000 +0300" stop="20260711183000 +0300" channel="TV3">
+  <programme start="20260712170000 +0300" stop="20260712183000 +0300" channel="TV3">
     <title>Populiarus serialas</title>
     <desc>Naujausia užsienio produkcijos serija.</desc>
   </programme>
-  <programme start="20260711183000 +0300" stop="20260711193000 +0300" channel="TV3">
+  <programme start="20260712183000 +0300" stop="20260712193000 +0300" channel="TV3">
     <title>TV3 Žinios</title>
     <desc>Išsamus dienos įvykių reportažas.</desc>
   </programme>
-  <programme start="20260711193000 +0300" stop="20260711210000 +0300" channel="TV3">
+  <programme start="20260712193000 +0300" stop="20260712210000 +0300" channel="TV3">
     <title>Aktualijų ir pramogų šou</title>
     <desc>Gera nuotaika bei analizė.</desc>
   </programme>
-  <programme start="20260711210000 +0300" stop="20260711230000 +0300" channel="TV3">
+  <programme start="20260712210000 +0300" stop="20260712230000 +0300" channel="TV3">
     <title>Vakaro kino filmas</title>
     <desc>Geriausių reitingų vaidybinis kinas.</desc>
   </programme>
-  <programme start="20260711230000 +0300" stop="20260711235900 +0300" channel="TV3">
+  <programme start="20260712230000 +0300" stop="20260712235900 +0300" channel="TV3">
     <title>Dienos apžvalga ir naktinis kinas</title>
     <desc>Svarbiausių akcentų santrauka.</desc>
   </programme>
-  <programme start="20260711060000 +0300" stop="20260711063000 +0300" channel="LNK">
+  <programme start="20260712060000 +0300" stop="20260712063000 +0300" channel="LNK">
     <title>Ryto programa</title>
     <desc>Pradėkite dieną žvaliai.</desc>
   </programme>
-  <programme start="20260711063000 +0300" stop="20260711090000 +0300" channel="LNK">
+  <programme start="20260712063000 +0300" stop="20260712090000 +0300" channel="LNK">
     <title>Informacinė ryto laida</title>
     <desc>Karščiausios naujienos, apžvalgos ir interviu.</desc>
   </programme>
-  <programme start="20260711090000 +0300" stop="20260711120000 +0300" channel="LNK">
+  <programme start="20260712090000 +0300" stop="20260712120000 +0300" channel="LNK">
     <title>Dienos vaidybinis filmas</title>
     <desc>Įtraukianti istorija visai šeimai.</desc>
   </programme>
-  <programme start="20260711120000 +0300" stop="20260711130000 +0300" channel="LNK">
+  <programme start="20260712120000 +0300" stop="20260712130000 +0300" channel="LNK">
     <title>Dienos žinios ir komentarai</title>
     <desc>Svarbiausi įvykiai Lietuvoje.</desc>
   </programme>
-  <programme start="20260711130000 +0300" stop="20260711150000 +0300" channel="LNK">
+  <programme start="20260712130000 +0300" stop="20260712150000 +0300" channel="LNK">
     <title>Dokumentinis serialas</title>
     <desc>Gamta, mokslas ir atradimai.</desc>
   </programme>
-  <programme start="20260711150000 +0300" stop="20260711170000 +0300" channel="LNK">
+  <programme start="20260712150000 +0300" stop="20260712170000 +0300" channel="LNK">
     <title>Popietės pokalbių laida</title>
     <desc>Diskusijos aktualiomis temomis.</desc>
   </programme>
-  <programme start="20260711170000 +0300" stop="20260711183000 +0300" channel="LNK">
+  <programme start="20260712170000 +0300" stop="20260712183000 +0300" channel="LNK">
     <title>Populiarus serialas</title>
     <desc>Naujausia užsienio produkcijos serija.</desc>
   </programme>
-  <programme start="20260711183000 +0300" stop="20260711193000 +0300" channel="LNK">
+  <programme start="20260712183000 +0300" stop="20260712193000 +0300" channel="LNK">
     <title>LNK Žinios</title>
     <desc>Išsamus dienos įvykių reportažas.</desc>
   </programme>
-  <programme start="20260711193000 +0300" stop="20260711210000 +0300" channel="LNK">
+  <programme start="20260712193000 +0300" stop="20260712210000 +0300" channel="LNK">
     <title>Aktualijų ir pramogų šou</title>
     <desc>Gera nuotaika bei analizė.</desc>
   </programme>
-  <programme start="20260711210000 +0300" stop="20260711230000 +0300" channel="LNK">
+  <programme start="20260712210000 +0300" stop="20260712230000 +0300" channel="LNK">
     <title>Vakaro kino filmas</title>
     <desc>Geriausių reitingų vaidybinis kinas.</desc>
   </programme>
-  <programme start="20260711230000 +0300" stop="20260711235900 +0300" channel="LNK">
+  <programme start="20260712230000 +0300" stop="20260712235900 +0300" channel="LNK">
     <title>Dienos apžvalga ir naktinis kinas</title>
     <desc>Svarbiausių akcentų santrauka.</desc>
   </programme>
-  <programme start="20260711060000 +0300" stop="20260711063000 +0300" channel="BTV">
+  <programme start="20260712060000 +0300" stop="20260712063000 +0300" channel="BTV">
     <title>Ryto programa</title>
     <desc>Pradėkite dieną žvaliai.</desc>
   </programme>
-  <programme start="20260711063000 +0300" stop="20260711090000 +0300" channel="BTV">
+  <programme start="20260712063000 +0300" stop="20260712090000 +0300" channel="BTV">
     <title>Informacinė ryto laida</title>
     <desc>Karščiausios naujienos, apžvalgos ir interviu.</desc>
   </programme>
-  <programme start="20260711090000 +0300" stop="20260711120000 +0300" channel="BTV">
+  <programme start="20260712090000 +0300" stop="20260712120000 +0300" channel="BTV">
     <title>Dienos vaidybinis filmas</title>
     <desc>Įtraukianti istorija visai šeimai.</desc>
   </programme>
-  <programme start="20260711120000 +0300" stop="20260711130000 +0300" channel="BTV">
+  <programme start="20260712120000 +0300" stop="20260712130000 +0300" channel="BTV">
     <title>Dienos žinios ir komentarai</title>
     <desc>Svarbiausi įvykiai Lietuvoje.</desc>
   </programme>
-  <programme start="20260711130000 +0300" stop="20260711150000 +0300" channel="BTV">
+  <programme start="20260712130000 +0300" stop="20260712150000 +0300" channel="BTV">
     <title>Dokumentinis serialas</title>
     <desc>Gamta, mokslas ir atradimai.</desc>
   </programme>
-  <programme start="20260711150000 +0300" stop="20260711170000 +0300" channel="BTV">
+  <programme start="20260712150000 +0300" stop="20260712170000 +0300" channel="BTV">
     <title>Popietės pokalbių laida</title>
     <desc>Diskusijos aktualiomis temomis.</desc>
   </programme>
-  <programme start="20260711170000 +0300" stop="20260711183000 +0300" channel="BTV">
+  <programme start="20260712170000 +0300" stop="20260712183000 +0300" channel="BTV">
     <title>Populiarus serialas</title>
     <desc>Naujausia užsienio produkcijos serija.</desc>
   </programme>
-  <programme start="20260711183000 +0300" stop="20260711193000 +0300" channel="BTV">
+  <programme start="20260712183000 +0300" stop="20260712193000 +0300" channel="BTV">
     <title>BTV Žinios</title>
     <desc>Išsamus dienos įvykių reportažas.</desc>
   </programme>
-  <programme start="20260711193000 +0300" stop="20260711210000 +0300" channel="BTV">
+  <programme start="20260712193000 +0300" stop="20260712210000 +0300" channel="BTV">
     <title>Aktualijų ir pramogų šou</title>
     <desc>Gera nuotaika bei analizė.</desc>
   </programme>
-  <programme start="20260711210000 +0300" stop="20260711230000 +0300" channel="BTV">
+  <programme start="20260712210000 +0300" stop="20260712230000 +0300" channel="BTV">
     <title>Vakaro kino filmas</title>
     <desc>Geriausių reitingų vaidybinis kinas.</desc>
   </programme>
-  <programme start="20260711230000 +0300" stop="20260711235900 +0300" channel="BTV">
+  <programme start="20260712230000 +0300" stop="20260712235900 +0300" channel="BTV">
     <title>Dienos apžvalga ir naktinis kinas</title>
     <desc>Svarbiausių akcentų santrauka.</desc>
   </programme>
-  <programme start="20260711060000 +0300" stop="20260711063000 +0300" channel="TV6">
+  <programme start="20260712060000 +0300" stop="20260712063000 +0300" channel="TV6">
     <title>Ryto programa</title>
     <desc>Pradėkite dieną žvaliai.</desc>
   </programme>
-  <programme start="20260711063000 +0300" stop="20260711090000 +0300" channel="TV6">
+  <programme start="20260712063000 +0300" stop="20260712090000 +0300" channel="TV6">
     <title>Informacinė ryto laida</title>
     <desc>Karščiausios naujienos, apžvalgos ir interviu.</desc>
   </programme>
-  <programme start="20260711090000 +0300" stop="20260711120000 +0300" channel="TV6">
+  <programme start="20260712090000 +0300" stop="20260712120000 +0300" channel="TV6">
     <title>Veiksmo filmas</title>
     <desc>Įtraukianti istorija visai šeimai.</desc>
   </programme>
-  <programme start="20260711120000 +0300" stop="20260711130000 +0300" channel="TV6">
+  <programme start="20260712120000 +0300" stop="20260712130000 +0300" channel="TV6">
     <title>Dienos žinios ir komentarai</title>
     <desc>Svarbiausi įvykiai Lietuvoje.</desc>
   </programme>
-  <programme start="20260711130000 +0300" stop="20260711150000 +0300" channel="TV6">
+  <programme start="20260712130000 +0300" stop="20260712150000 +0300" channel="TV6">
     <title>Dokumentinis serialas</title>
     <desc>Gamta, mokslas ir atradimai.</desc>
   </programme>
-  <programme start="20260711150000 +0300" stop="20260711170000 +0300" channel="TV6">
+  <programme start="20260712150000 +0300" stop="20260712170000 +0300" channel="TV6">
     <title>Popietės pokalbių laida</title>
     <desc>Diskusijos aktualiomis temomis.</desc>
   </programme>
-  <programme start="20260711170000 +0300" stop="20260711183000 +0300" channel="TV6">
+  <programme start="20260712170000 +0300" stop="20260712183000 +0300" channel="TV6">
     <title>Populiarus serialas</title>
     <desc>Naujausia užsienio produkcijos serija.</desc>
   </programme>
-  <programme start="20260711183000 +0300" stop="20260711193000 +0300" channel="TV6">
+  <programme start="20260712183000 +0300" stop="20260712193000 +0300" channel="TV6">
     <title>TV6 Žinios</title>
     <desc>Išsamus dienos įvykių reportažas.</desc>
   </programme>
-  <programme start="20260711193000 +0300" stop="20260711210000 +0300" channel="TV6">
+  <programme start="20260712193000 +0300" stop="20260712210000 +0300" channel="TV6">
     <title>Aktualijų ir pramogų šou</title>
     <desc>Gera nuotaika bei analizė.</desc>
   </programme>
-  <programme start="20260711210000 +0300" stop="20260711230000 +0300" channel="TV6">
+  <programme start="20260712210000 +0300" stop="20260712230000 +0300" channel="TV6">
     <title>Veiksmo filmas</title>
     <desc>Geriausių reitingų vaidybinis kinas.</desc>
   </programme>
-  <programme start="20260711230000 +0300" stop="20260711235900 +0300" channel="TV6">
+  <programme start="20260712230000 +0300" stop="20260712235900 +0300" channel="TV6">
     <title>Dienos apžvalga ir naktinis kinas</title>
     <desc>Svarbiausių akcentų santrauka.</desc>
   </programme>
